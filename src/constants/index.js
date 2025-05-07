@@ -61,6 +61,11 @@ export const navigation = [
     url: "#roadmap",
   },
   {
+    id: "33",
+    title: "BirthDay",
+    url: "#BirthdayCelebration",
+  },
+  {
     id: "4",
     title: "Facebook",
     url: "https://www.facebook.com/PastorMoyo",

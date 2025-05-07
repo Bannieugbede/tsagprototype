@@ -21,70 +21,106 @@
   body {
     @apply font-sans bg-n-8 text-n-1 text-base;
   }
+
+  .font-sora {
+    font-family: var(--font-sora);
+  }
+
+  .font-code {
+    font-family: var(--font-code);
+  }
+
+  .font-grotesk {
+    font-family: var(--font-grotesk);
+  }
 }
 
-.rotate-45 {
-  @apply rotate-[45deg]
+@layer utilities {
+  .rotate-45 {
+    @apply rotate-[45deg]
+  }
+
+  .rotate-90 {
+    @apply rotate-[90deg]
+  }
+
+  .rotate-135 {
+    @apply rotate-[135deg]
+  }
+
+  .rotate-180 {
+    @apply rotate-[180deg]
+  }
+
+  .rotate-225 {
+    @apply rotate-[225deg]
+  }
+
+  .rotate-270 {
+    @apply rotate-[270deg]
+  }
+
+  .rotate-315 {
+    @apply rotate-[315deg]
+  }
+
+  .rotate-360 {
+    @apply rotate-[360deg]
+  }
+
+  .-rotate-45 {
+    @apply rotate-[-45deg]
+  }
+
+  .-rotate-90 {
+    @apply rotate-[-90deg]
+  }
+
+  .-rotate-135 {
+    @apply rotate-[-135deg]
+  }
+
+  .-rotate-180 {
+    @apply rotate-[-180deg]
+  }
+
+  .-rotate-225 {
+    @apply rotate-[-225deg]
+  }
+
+  .-rotate-270 {
+    @apply rotate-[-270deg]
+  }
+
+  .-rotate-315 {
+    @apply rotate-[-315deg]
+  }
+
+  .-rotate-360 {
+    @apply rotate-[-360deg]
+  }
+
+  /* Utility for programme item */
+  .programme-item {
+    @apply flex justify-between items-center border-b border-n-2/20 pb-2 hover:text-n-3 transition-colors;
+  }
+
+  /* Utility for image container */
+  .image-card {
+    @apply relative z-1 p-0.5 rounded-2xl bg-conic-gradient;
+  }
 }
 
-.rotate-90 {
-  @apply rotate-[90deg]
-}
-
-.rotate-135 {
-  @apply rotate-[135deg]
-}
-
-.rotate-180 {
-  @apply rotate-[180deg]
-}
-
-.rotate-225 {
-  @apply rotate-[225deg]
-}
-
-.rotate-270 {
-  @apply rotate-[270deg]
-}
-
-.rotate-315 {
-  @apply rotate-[315deg]
-}
-
-.rotate-360 {
-  @apply rotate-[360deg]
-}
-
-.-rotate-45 {
-  @apply rotate-[-45deg]
-}
-
-.-rotate-90 {
-  @apply rotate-[-90deg]
-}
-
-.-rotate-135 {
-  @apply rotate-[-135deg]
-}
-
-.-rotate-180 {
-  @apply rotate-[-180deg]
-}
-
-.-rotate-225 {
-  @apply rotate-[-225deg]
-}
-
-.-rotate-270 {
-  @apply rotate-[-270deg]
-}
-
-.-rotate-315 {
-  @apply rotate-[-315deg]
-}
-
-.-rotate-360 {
-  @apply rotate-[-360deg]
+@layer components {
+  /* Define conic gradient for reusability */
+  .bg-conic-gradient {
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+  }
 }
 
 @media (max-width: 80rem) {

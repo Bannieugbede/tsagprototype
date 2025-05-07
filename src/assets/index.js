@@ -99,6 +99,7 @@ import skill from "./skill.jpg";
 import traffic from "./traffic.jpeg";
 import partner from "./partner.jpeg";
 import feeding from "./feeding.jpg";
+import birthdayimage from "./pastor-moyosore.jpg";
 
 export {
   brainwave,
@@ -193,4 +194,5 @@ export {
   instagram,
   telegram,
   twitter,
+  birthdayimage,
 };

@@ -15,6 +15,13 @@ export default {
           5: "#858DFF",
           6: "#FF98E2",
         },
+        colors: {
+        'n-1': '#ffffff', // White for primary text
+        'n-2': '#a3a8b8', // Gray for secondary text
+        'n-3': '#d4d7e0', // Light gray for hover
+        'n-8': '#1a1c28', // Dark background
+        'n-9': '#2a2e3f', // Slightly lighter dark for cards
+      },
         stroke: {
           1: "#26242C",
         },

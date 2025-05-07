@@ -23,9 +23,9 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
-          Transforming Lives Globally through Faith and {` `}
+            Transforming Lives Globally through Faith and {` `}
             <span className="inline-block relative">
-            Compassion{" "}
+              Compassion{" "}
               <img
                 src={curve}
                 className="absolute top-full left-0 w-full xl:-mt-2"
@@ -36,11 +36,35 @@ const Hero = () => {
             </span>
           </h1>
           <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
-          To be a global development model faith based Organization for raising and strengthening young leaders through transformative education and mentorship programmes to reach their potentials.
+            To be a global development model faith based Organization for raising and strengthening young leaders through transformative education and mentorship programmes to reach their potentials.
           </p>
           <Button href="/pricing" white>
             Get started
           </Button>
+          <a
+            href="./BirthdayCelebration"
+            className="block mt-4 text-n-2 underline hover:text-n-1 transition-colors"
+          >
+            {/* A Life of Faith, A Heart of Gold: Celebrating Pastor Moyosore Josephs Birthday */}
+                                                                                          
+          </a>
+          <a
+            href="https://forms.gle/McdjZyTZaKmYC9wf9"
+          className="h1 mb-6">
+          Click here to
+            <span className="inline-block relative">
+            Partner with TSAGO{" "}
+              <img
+                src={curve}
+                className="absolute top-full left-0 w-full xl:-mt-2"
+                width={624}
+                height={28}
+                alt="Curve"
+              />
+            </span
+          >
+            {/* Partner with TSAGO */}
+          </a>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
@@ -60,11 +84,11 @@ const Hero = () => {
 
                 <ScrollParallax isAbsolutelyPositioned>
                   <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
-                      <li className="p-5">
-                        <h1>
-                          Transforming Lives
-                        </h1>
-                      </li>
+                    <li className="p-5">
+                      <h1>
+                      Transforming Lives
+                      </h1>
+                    </li>
                   </ul>
                 </ScrollParallax>
 
