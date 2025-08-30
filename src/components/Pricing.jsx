@@ -28,7 +28,7 @@ const Pricing = () => {
         </div>
 
         <Heading
-          tag="Get started with TSAG Library"
+          tag="Get started with TSAGO Library"
           title="Get Some Of Our Materials"
         />
 
