@@ -11,6 +11,7 @@ import Services from "./components/Services";
 import DownloadModal from "./components/DownloadModal";
 import ThankYouModal from "./components/ThankYouModal"; // Import the new modal
 import BirthdayCelebration from "./components/BirthdayCelebration";
+import WeddingCelebration from "./components/WeddingCelebration";
 
 const App = () => {
   const [activeModal, setActiveModal] = useState(null);
@@ -67,6 +68,7 @@ const App = () => {
         <Collaboration />
         <Services />
         <BirthdayCelebration />
+        <WeddingCelebration />
         <Pricing />
         <Roadmap />
         <Footer />

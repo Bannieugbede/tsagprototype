@@ -100,6 +100,7 @@ import traffic from "./traffic.jpeg";
 import partner from "./partner.jpeg";
 import feeding from "./feeding.jpg";
 import birthdayimage from "./pastor-moyosore.jpg";
+import engagementivimage from "./engagementivimage.jpeg";
 
 export {
   brainwave,
@@ -195,4 +196,5 @@ export {
   telegram,
   twitter,
   birthdayimage,
+  engagementivimage,
 };
