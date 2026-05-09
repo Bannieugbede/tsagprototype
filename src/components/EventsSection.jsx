@@ -1,13 +1,13 @@
 import Section from "./Section";
 import { birthdayimage } from "../assets";
 
-const BirthdayCelebration = () => {
+const EventsSection = () => {
   return (
     <Section
       className="pt-[8rem] pb-[4rem] bg-n-8"
       crosses
       customPaddings
-      id="BirthdayCelebration"
+      id="EventsSection"
     >
       <div className="container mx-auto px-4">
         <h1 className="h1 text-center mb-8 font-sora text-n-1">
@@ -35,7 +35,7 @@ const BirthdayCelebration = () => {
         </div>
 
         {/* Programme Section */}
-        <div className="max-w-2xl mx-auto bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl p-6">
+        {/* <div className="max-w-2xl mx-auto bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl p-6">
           <h2 className="h2 mb-6 text-center font-sora text-n-1">
           AGENDA
           </h2>
@@ -103,10 +103,10 @@ const BirthdayCelebration = () => {
               <span className="font-code">7:20PM - 7:30PM</span>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </Section>
   );
 };
 
-export default BirthdayCelebration;
+export default EventsSection;

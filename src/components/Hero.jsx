@@ -42,7 +42,7 @@ const Hero = () => {
             Get started
           </Button>
           <a
-            href="./BirthdayCelebration"
+            href="./EventsSection"
             className="block mt-4 text-n-2 underline hover:text-n-1 transition-colors"
           >
             {/* A Life of Faith, A Heart of Gold: Celebrating Pastor Moyosore Josephs Birthday */}

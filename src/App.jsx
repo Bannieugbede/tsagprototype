@@ -10,7 +10,7 @@ import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
 import DownloadModal from "./components/DownloadModal";
 import ThankYouModal from "./components/ThankYouModal"; // Import the new modal
-import BirthdayCelebration from "./components/BirthdayCelebration";
+import EventsSection from "./components/EventsSection";
 import WeddingCelebration from "./components/WeddingCelebration";
 
 const App = () => {
@@ -67,7 +67,7 @@ const App = () => {
         <Benefits />
         <Collaboration />
         <Services />
-        <BirthdayCelebration />
+        <EventsSection />
         <WeddingCelebration />
         <Pricing />
         <Roadmap />

@@ -63,7 +63,7 @@ export const navigation = [
   {
     id: "33",
     title: "Events",
-    url: "#BirthdayCelebration",
+    url: "#EventsSection",
   },
   {
     id: "4",
