@@ -66,6 +66,11 @@ export const navigation = [
     url: "#EventsSection",
   },
   {
+    id: "34",
+    title: "TSAGO DAILY DOSE",
+    url: "/daily-dose",
+  },
+  {
     id: "4",
     title: "Facebook",
     url: "https://www.facebook.com/PastorMoyo",

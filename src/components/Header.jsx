@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 import { brainwave } from "../assets";
@@ -9,7 +9,8 @@ import { HamburgerMenu } from "./design/Header";
 import { useState } from "react";
 
 const Header = () => {
-  const pathname = useLocation();
+  const location = useLocation();
+  const navigate = useNavigate();
   const [openNavigation, setOpenNavigation] = useState(false);
 
   const toggleNavigation = () => {
@@ -27,6 +28,39 @@ const Header = () => {
 
     enablePageScroll();
     setOpenNavigation(false);
+  };
+
+  const scrollToSection = (hash) => {
+    const id = hash?.replace("#", "");
+    if (!id) return;
+
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    window.location.hash = hash;
+  };
+
+  const handleNavClick = (item) => {
+    handleClick();
+
+    if (!item.url) return;
+
+    if (item.url.startsWith("#")) {
+      if (location.pathname !== "/") {
+        window.location.assign(`/${item.url}`);
+        return;
+      }
+
+      scrollToSection(item.url);
+      return;
+    }
+
+    if (item.url.startsWith("/")) {
+      navigate(item.url);
+    }
   };
 
   return (
@@ -48,22 +82,51 @@ const Header = () => {
           } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-            {navigation.map((item) => (
-              <a
-                key={item.id}
-                href={item.url}
-                onClick={handleClick}
-                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                  item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                  item.url === pathname.hash
-                    ? "z-2 lg:text-n-1"
-                    : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-              >
-                {item.title}
-              </a>
-            ))}
+            {navigation.map((item) => {
+              const isExternal = item.url?.startsWith("http");
+              const isActive =
+                item.url === location.hash ||
+                item.url === location.pathname ||
+                (item.url === "#features" && location.pathname === "/");
+
+              const linkClasses = `block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                item.onlyMobile ? "lg:hidden" : ""
+              } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
+                isActive ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
+              } lg:leading-5 lg:hover:text-n-1 xl:px-12`;
+
+              if (item.url?.startsWith("#")) {
+                return (
+                  <button
+                    key={item.id}
+                    type="button"
+                    onClick={() => handleNavClick(item)}
+                    className={linkClasses}
+                  >
+                    {item.title}
+                  </button>
+                );
+              }
+
+              if (isExternal) {
+                return (
+                  <a
+                    key={item.id}
+                    href={item.url}
+                    onClick={handleClick}
+                    className={linkClasses}
+                  >
+                    {item.title}
+                  </a>
+                );
+              }
+
+              return (
+                <Link key={item.id} to={item.url} onClick={handleClick} className={linkClasses}>
+                  {item.title}
+                </Link>
+              );
+            })}
           </div>
 
           <HamburgerMenu />
